@@ -1,0 +1,7 @@
+#swap alg  mem_limitdisk_size swap_prioritypage-cluster swappiness
+swap  lzo-rle 250M      750M      75            0            80
+#dir  alg     mem_limit disk_size target_dir            bind_dir
+dir  lzo-rle 50M       150M      /tmp                  /tmp.bind
+#log  alg     mem_limit disk_size target_dir            bind_dir           oldlog_dir
+log  lzo-rle 50M       150M      /var/log              /log.bind          /opt/zram/old-klipper-logs
+log   lzo-rle 50M       150M      /home/pi/klipper_logs /klipper_logs.bind /opt/zram/oldlog
